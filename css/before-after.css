@@ -1,0 +1,169 @@
+#img1, #img2 {
+    max-width: 100%;
+    background-size: 1000px;
+    height: 562px;
+}
+#img1 {
+    width: 1000px;
+    background: url(http://lroc.sese.asu.edu/data/support/featured_sites/Impacts/March17/M1129645568L.jpg) left center no-repeat;
+    -webkit-transform: translateZ(0);
+}
+#img2 {
+    width: 57%;
+    background: url(http://lroc.sese.asu.edu/data/support/featured_sites/Impacts/March17/M183689789L.jpg) left center no-repeat;
+    border-right: 1px solid #888;
+    -webkit-animation-name: img-width-init;
+    -webkit-animation-duration: 4s;
+    animation-name: img-width-init;
+    animation-duration: 4s;
+}
+#drag {
+    width: 29px;
+    left: 57%;
+    margin-left: -14px;
+    -webkit-animation-name: drag-init;
+    -webkit-animation-duration: 4s;
+    animation-name: drag-init;
+    animation-duration: 4s;
+}
+.arrow-left, .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    display: inline-block;
+    margin-left: 2px;
+}
+.arrow-left {
+    border-right:10px solid #4E9FDF;
+    animation: flash-left 2s linear 0s 1 normal;
+    -webkit-animation: flash-left 2s linear 0s 1 normal;
+}
+.arrow-right {
+    border-left:10px solid #4E9FDF;
+    animation: flash-right 2s linear 2s 1 normal;
+    -webkit-animation: flash-right 2s linear 2s 1 normal;
+}
+.arrow-left:hover {
+    border-right-color: #005CFF;
+}
+.arrow-right:hover {
+    border-left-color: #005CFF;
+}
+/* animations */
+ @keyframes drag-init {
+    0% {
+        left: 100% - 14px);
+    }
+    50% {
+        left: 40%;
+        margin-left: -14px;
+    }
+    100% {
+        left: 57%;
+        margin-left: -14px;
+    }
+}
+@-webkit-keyframes drag-init {
+    0% {
+        left: 100%;
+        margin-left: -14px;
+    }
+    50% {
+        left: 40%;
+        margin-left: -14px;
+    }
+    100% {
+        left: calc(57%- 14px);
+    }
+}
+@keyframes img-width-init {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 40%;
+    }
+    100% {
+        width: 57%;
+    }
+}
+@-webkit-keyframes img-width-init {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 40%;
+    }
+    100% {
+        width: 57%;
+    }
+}
+@keyframes flash-left {
+    from {
+        border-right-color: #005CFF;
+    }
+    to {
+        border-right-color: #4E9FDF;
+    }
+}
+@-webkit-keyframes flash-left {
+    from {
+        border-right-color: #005CFF;
+    }
+    to {
+        border-right-color: #4E9FDF;
+    }
+}
+@keyframes flash-right {
+    from {
+        border-left-color: #005CFF;
+    }
+    to {
+        border-left-color: #4E9FDF;
+    }
+}
+@-webkit-keyframes flash-right {
+    from {
+        border-left-color: #005CFF;
+    }
+    to {
+        border-left-color: #4E9FDF;
+    }
+}
+@media(max-width: 787px) {
+    #img1, #img2 {
+        background-size: 783px;
+        height: 438px;
+    }
+    #img1 {
+        width: 783px;
+    }
+}
+@media(max-width: 600px) {
+    #img1, #img2 {
+        background-size: 596px;
+        height: 337px;
+    }
+    #img1 {
+        width: 596px
+    }
+}
+@media(max-width: 370px) {
+    #img1, #img2 {
+        background-size: 366px;
+        height: 202px;
+    }
+    #img1 {
+        width: 366px;
+    }
+}
+@media(max-width: 320px) {
+    #img1, #img2 {
+        background-size: 316px;
+        height: 180px;
+    }
+    #img1 {
+        width: 316px;
+    }
+}
